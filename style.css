@@ -1,0 +1,534 @@
+/*  Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Ubuntu:ital@1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styling for all section*/
+section {
+  padding: 100px 0;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.about, .skills, .contact {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.about .about-section, .skills .skills-section,
+.contact .contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: black;
+  transform: translateX(-50%);
+}
+
+section .title::after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 20px;
+  color: #0059FF;
+  padding: 0 5px;
+  background: #527BFF;
+  transform: translateX(-50%);
+}
+
+/* Styling Navigation Bar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #527BFF;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: #0059FF;
+  transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  display: block;
+  color: #527BFF;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: #0059FF;
+}
+
+/* Menu button */
+.menuBtn {
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Styling Home Section */
+.home {
+  display: flex;
+  background: url("https://i.pinimg.com/originals/39/f6/a0/39f6a005763b37e2237b320df0e68e31.gif") no-repeat center;
+  height: 100vh;
+  color: white;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 30px;
+}
+
+.home .home-section .text-1 {
+  font-size: 27px;
+}
+
+.home .home-section .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home .home-section .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-section .text-3 span {
+  color: #0059FF;
+  font-weight: 500;
+}
+
+.home .home-section a {
+  display: inline-block;
+  background: #0059FF;
+  color: white;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid #0059FF;
+  transition: all 0.3s ease;
+}
+
+.home .home-section a:hover {
+  color: #0059FF;
+  background: none;
+}
+
+/* Styling About Section */
+.about .about-section .left {
+  width: 45%;
+}
+
+.about .about-section .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-section .right {
+  width: 55%;
+}
+
+.about .about-section .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-section .right .text span {
+  color: #0059FF;
+}
+
+.about .about-section .right p {
+  text-align: justify;
+}
+
+.about .about-section .right a {
+  display: inline-block;
+  background: #0059FF;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #0059FF;
+  transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+  color: #0059FF;
+  background: none;
+}
+
+/* Styling Skills Section */
+.skills .skills-section .column {
+  width: calc(50% - 30px);
+}
+
+.skills .skills-section .left .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skills-section .left p {
+  text-align: justify;
+}
+
+.skills .skills-section .left a {
+  display: inline-block;
+  background: #0059FF;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #0059FF;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-section .left a:hover {
+  color: #0059FF;
+  background: none;
+}
+
+.skills .skills-section .right .bars {
+  margin-bottom: 15px;
+}
+
+.skills .skills-section .right .info {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skills-section .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skills-section .right .line {
+  height: 5px;
+  width: 100%;
+  background: #CCD8EE;
+  position: relative;
+}
+
+.skills .skills-section .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #0059FF;
+}
+
+.skills-section .right .html::before {
+  width: 75%;
+}
+
+.skills-section .right .css::before {
+  width: 70%;
+}
+
+.skills-section .right .js::before {
+  width: 70%;
+}
+
+/* Styling Contact Section */
+.contact .contact-section .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-section .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact .contact-section .left p {
+  text-align: justify;
+}
+
+.contact .contact-section .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contact-section .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contact-section.row .info {
+  margin-left: 30px;
+}
+
+.contact .contact-section .row i {
+  font-size: 25px;
+  color: #0059FF;
+}
+
+.contact .contact-section .info .head {
+  font-weight: 500;
+}
+
+.contact .contact-section .info .sub-title {
+  color: #686767;
+}
+
+.contact .right form .fields {
+  display: flex;
+}
+
+.contact .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contact .right form .feildTextArea {
+  height: 80px;
+  width: 100%;
+}
+
+.contact .right form .name {
+  margin-right: 10px;
+}
+
+.contact .right form .email {
+  margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .fieldTextArea  textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #CCD8EE;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .fieldTextArea textarea:focus {
+  border-color: #CCD8EE;
+}
+
+.contact .right form .fieldTextArea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button {
+  height: 47px;
+  width: 170px;
+}
+
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0059FF;
+  background: #0059FF;
+  color: white;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact .right form .button button:hover {
+  color: #0059FF;
+  background: none;
+}
+
+/*Media query Responsive*/
+@media (max-width: 1300px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .about .about-section .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .menuBtn {
+    z-index: 999;
+  }
+
+  .menuBtn i.active:before {
+    content: "\f00d";
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .home .home-section .text-2 {
+    font-size: 70px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 35px;
+  }
+
+  .home .home-section a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+
+  .max-width {
+    max-width: 930px;
+  }
+
+  .about .about-section .column {
+    width: 100%;
+  }
+
+  .about .about-section .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .about .about-section .right {
+    flex: 100%;
+  }
+
+  .skills .skills-section .column,
+  .contact .contact-section .column {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .home .home-section .text-2 {
+    font-size: 60px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 32px;
+  }
+
+  .home .home-section a {
+    font-size: 20px;
+  }
+
+@media (max-width: 500px) {
+  .home .home-section .text-2 {
+    font-size: 50px;
+  }
+
+  .home .home-section .text-3 {
+    font-size: 27px;
+  }
+
+  .about .about-section .right .text,
+  .skills .skills-section .left .text {
+    font-size: 19px;
+  }
+
+  .contact .right form .fields {
+    flex-direction: column;
+  }
+
+  .contact .right form .name,
+  .contact .right form .email {
+    margin: 0;
+  }
